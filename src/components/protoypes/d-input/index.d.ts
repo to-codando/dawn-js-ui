@@ -1,4 +1,4 @@
-export function button(params: DawnJSButton.IDecorators): void
+export function input(params: DawnJSButton.IDecorators): void
 
 declare namespace DawnJSButton {
   interface IDecorators {
