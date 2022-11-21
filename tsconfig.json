@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "charset": "utf-8",
+    "composite": true,
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "nodenext",
+    "lib": ["es2018", "dom"],
+    "declaration": true,
+    "declarationMap": true,
+    "incremental": true,
+    "allowJs": true,
+    "checkJs": true,
+    "emitDeclarationOnly": true,
+    "strict": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames":true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noImplicitAny": true
+  },
+  "include": [
+    "./src/components/**/*.js",
+  ]
+}

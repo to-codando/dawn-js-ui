@@ -1,0 +1,18 @@
+{
+  "env": {
+    "browser": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module"
+  },
+  "rules": {
+    "semi": ["error", "never"],
+    "quotes": ["error", "single"],
+    "comma-dangle": ["error", "never"],
+    "no-implicit-globals": "off",
+  },
+  "plugins": ["fetch"],
+  "extends": [
+    "plugin:fetch/recommended"]
+}

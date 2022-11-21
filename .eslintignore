@@ -1,0 +1,4 @@
+**/*.ts
+**/*.json
+jsconfig.json
+tsconfig.json
