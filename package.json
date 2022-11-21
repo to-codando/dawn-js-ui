@@ -1,5 +1,5 @@
 {
-  "name": "DawnJS UI",
+  "name": "dawn-js-ui",
   "version": "0.0.1",
   "description": "Reactive Library to SPA.",
   "main": "index.js",

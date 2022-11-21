@@ -1,22 +1,22 @@
-type DawnJSPayload = { [key: string]: any }
-type DawnJSParams = { [key: string]: any }
-type DawnJSCalback = (params: DawnJSParams) => void
-type DawnJSHandler = () => {}
+export declare type DawnJSPayload = { [key: string]: any }
+export declare type DawnJSParams = { [key: string]: any }
+export declare type DawnJSCalback = (params: DawnJSParams) => void
+export declare type DawnJSHandler = () => {}
 
-export interface DawnJSProps {
+export declare interface DawnJSProps {
   on: (callback: DawnJSCalback) => DawnJSCalback
   off: (handler: DawnJSHandler) => void
   set: (params: DawnJSParams) => void
   get: () => DawnJSPayload
 }
-export interface DawnJSState {
+export declare interface DawnJSState {
   on: (callback: DawnJSCalback) => DawnJSCalback
   off: (handler: DawnJSHandler) => void
   set: (params: DawnJSParams) => void
   get: () => DawnJSPayload
 }
 
-export interface DawnJSComponent {
+export declare interface DawnJSComponent {
   register: (element: HTMLElement) => void
   children: (components: DawnJSParams) => void
   init: () => void

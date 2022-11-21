@@ -1,3 +1,3 @@
-export { input } from './src/components/protoypes/d-input/index.js'
-export { button } from './src/components/protoypes/d-button/index.js'
-export { DawnJSComponent } from './src/components/IComponent.d.ts'
+export { input } from './components/protoypes/d-input/index.js'
+export { button } from './components/protoypes/d-button/index.js'
+export { DawnJSComponent } from './components/IComponent.d.ts'

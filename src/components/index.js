@@ -1,2 +1,2 @@
-export { input } from './protoypes/d-input'
-export { button } from './protoypes/d-button'
+export { input } from './d-input'
+export { button } from './d-button'
