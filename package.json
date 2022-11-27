@@ -1,5 +1,7 @@
 {
   "name": "dawn-js-ui",
+  "private": true,
+  "sideEffects": false,
   "version": "0.0.4",
   "description": "Reactive Library to SPA.",
   "main": "./src/index.js",
@@ -20,5 +22,7 @@
     "url": "https://github.com/to-codando/dawn-js-ui/issues"
   },
   "homepage": "https://github.com/to-codando/dawn-js-ui#readme",
-  "dependencies": {}
+  "dependencies": {
+    "dawn-js-core": "^0.0.12"
+  }
 }
