@@ -14,7 +14,8 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames":true,
     "suppressImplicitAnyIndexErrors": true,
-    "noImplicitAny": true
+    "noImplicitAny": true,
+    "outDir": "./src/types"
   },
   "include": [
     "./src/components/**/*.js",

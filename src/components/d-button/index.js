@@ -1,7 +1,9 @@
+import { dawnJS } from 'dawn-js-core'
+
 import template from './template.js'
 import styles from './styles.js'
 
-export const button = (_) => {
+const button = (_) => {
   _.view(() => ({
     template,
     styles
@@ -33,3 +35,5 @@ const onClick = ({ on, props }) => {
   })
 }
 /** METHODS */
+
+export const appButton = dawnJS.create(button)

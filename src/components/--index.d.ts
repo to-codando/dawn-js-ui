@@ -26,6 +26,35 @@ export declare interface DawnJSComponent {
 
 export function button(params: DawnJSInput.IDecorators): void
 
+export const appButton: {
+  children: (selector: any, children: any) => any;
+  register: (element: any) => void;
+  init: () => void;
+  props: {
+      set: (payload: any) => void;
+      get: () => any;
+      on: (eventName: any, callback: any) => any;
+      off: (handler: any) => void;
+      view: () => void;
+  };
+  state: {
+      set: (payload: any) => void;
+      get: () => any;
+      on: (callback: any) => any;
+      off: (handler: any) => void;
+      view: () => void;
+  };
+  eventDrive: {
+      emit: () => void;
+      off: (handler: any) => void;
+      on: (eventName: any, callback: any) => {
+          eventName: any;
+          handler: any;
+      };
+      view: (eventName: any, payload: any) => void;
+  };
+};
+
 declare namespace DawnJSInput {
   interface IDecorators {
     view?: (viewParams: ViewDecorator) => void
@@ -64,6 +93,35 @@ declare namespace DawnJSInput {
 }
 
 export function input(params: DawnJSButton.IDecorators): void
+export const appInput: {
+  children: (selector: any, children: any) => any;
+  register: (element: any) => void;
+  init: () => void;
+  props: {
+      set: (payload: any) => void;
+      get: () => any;
+      on: (eventName: any, callback: any) => any;
+      off: (handler: any) => void;
+      view: () => void;
+  };
+  state: {
+      set: (payload: any) => void;
+      get: () => any;
+      on: (callback: any) => any;
+      off: (handler: any) => void;
+      view: () => void;
+  };
+  eventDrive: {
+      emit: () => void;
+      off: (handler: any) => void;
+      on: (eventName: any, callback: any) => {
+          eventName: any;
+          handler: any;
+      };
+      view: (eventName: any, payload: any) => void;
+  };
+};
+
 
 declare namespace DawnJSButton {
   interface IDecorators {

@@ -1,18 +1,20 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "lib": ["es2017", "dom"],
-    "declaration": true,
+  // Tells TypeScript to read JS files, as
+    // normally they are ignored as source files
     "allowJs": true,
-    "checkJs": true,
+    // Generate d.ts files
+    "declaration": true,
+    // This compiler run should
+    // only output d.ts files
     "emitDeclarationOnly": true,
-    "strict": true,
-    "noImplicitThis": true,
-    "alwaysStrict": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames":true
+    // Types should go into this directory.
+    // Removing this would place the .d.ts files
+    // next to the .js files
+    "outDir": "types",
+    // go to js file when using IDE functions like
+    // "Go to Definition" in VSCode
+    "declarationMap": true
   },
   "include": [
     "./src/components/**/*.js"

@@ -1,7 +1,8 @@
+import { dawnJS } from 'dawn-js-core'
 import template from './template.html.js'
 import styles from './styles.css.js'
 
-export const input = (_) => {
+const input = (_) => {
   _.view(() => ({
     template,
     styles
@@ -25,6 +26,8 @@ export const input = (_) => {
     watchClearEvent
   }))
 }
+
+
 
 /** HOOKS */
 
@@ -121,3 +124,6 @@ const clearInput = (props, state, payload) => {
 const setState = (state, payload) => {
   state.set({ ...state.get(), ...payload })
 }
+
+
+export const appInput = dawnJS.create(input)
