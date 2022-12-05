@@ -120,6 +120,11 @@
   padding-bottom: 6em;
 }
 
+.xy-align-center {
+  align-self: center;
+  justify-self: center;
+}
+
 /*GRID*/
 
 .grid {
@@ -129,6 +134,10 @@
   grid-auto-rows: minmax(0, auto);
   grid-gap: 2rem;
   gap: 2rem;
+}
+
+.grid + .grid {
+  margin-top: 2em
 }
 
 .grid.justify-end {

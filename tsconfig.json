@@ -19,5 +19,10 @@
   },
   "include": [
     "./src/components/**/*.js",
+  ],
+  "exclude": [
+    "./src/**/*.d.ts",
+    "node_modules",
+    "types"
   ]
 }

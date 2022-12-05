@@ -1,5 +1,4 @@
-/** METHODS */
-export const appButton: {
+export function button(): {
     children: (selector: any, children: any) => any;
     register: (selector: string, context: HTMLElement) => void;
     init: () => void;
@@ -17,6 +16,7 @@ export const appButton: {
         off: (handler: any) => void;
         view: () => void;
     };
+    /** METHODS */
     eventDrive: {
         emit: () => void;
         off: (handler: any) => void;

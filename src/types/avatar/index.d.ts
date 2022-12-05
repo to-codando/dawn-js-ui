@@ -1,4 +1,4 @@
-export function input(): {
+export function avatar(): {
     children: (selector: any, children: any) => any;
     register: (selector: string, context: HTMLElement) => void;
     init: () => void;

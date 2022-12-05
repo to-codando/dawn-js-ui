@@ -1,8 +1,8 @@
-import { dawnJS } from 'dawn-js-core'
+import { dawnJS, dataBind } from 'dawn-js-core'
 import template from './template.html.js'
 import styles from './styles.css.js'
 
-const input = (_) => {
+const inputFactory = (_) => {
   _.view(() => ({
     template,
     styles
@@ -23,7 +23,8 @@ const input = (_) => {
     setFocus,
     setState,
     validate,
-    watchClearEvent
+    watchClearEvent,
+    debounce
   }))
 }
 
@@ -31,7 +32,9 @@ const input = (_) => {
 
 /** HOOKS */
 
-const beforeOnInit = ({ state, queryOnce, props, methods }) => {}
+const beforeOnInit = ({ state, queryOnce, props, methods }) => {
+  props.set({ label: 'Defina um label'})
+}
 
 const afterOnInit = ({ queryOnce, state, props, methods }) => {
   methods.autofocus(queryOnce)
@@ -42,10 +45,20 @@ const afterOnInit = ({ queryOnce, state, props, methods }) => {
 /** LISTENERS */
 
 const onKeyUp = ({ on, queryOnce, state, props, methods }) => {
-  on('keyup', 'input', ({ target }) => {
-    methods.setState(state, { value: target.value })
-    methods.validate(target, props, state)
-  })
+  const inputElement = queryOnce('input')
+  const [setInputValue, watchValueChange] = dataBind(inputElement, {value: ''})
+
+  const setState = (payload) => {
+    const { events } = props.get()
+    events && events.logger && events.logger(payload)
+    methods.validate(inputElement, props, state)
+  }
+
+  watchValueChange(setState)
+
+  on('keyup', 'input', methods.debounce(({ target }) => {
+    setInputValue({ value: target.value })
+  }))
 
   methods.setFocus(queryOnce('input'), state)
 }
@@ -125,5 +138,15 @@ const setState = (state, payload) => {
   state.set({ ...state.get(), ...payload })
 }
 
+const debounce = (callback, delay) => {
+  let timer
+   return (event) => {
+      clearTimeout(timer)
+      timer = setTimeout(() => {
+          callback(event)
+      }, delay || 500)
+    }
+}
 
-export const appInput = dawnJS.create(input)
+
+export const input = () => dawnJS.create(inputFactory)
