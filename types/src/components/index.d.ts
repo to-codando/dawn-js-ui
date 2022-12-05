@@ -1,3 +1,0 @@
-export { input } from "./d-input";
-export { button } from "./d-button";
-export { avatar } from "./avatar";

@@ -1,7 +1,7 @@
 {
   "name": "dawn-js-ui",
   "sideEffects": false,
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "Reactive Library to SPA.",
   "main": "index.js",
   "types": "types",
