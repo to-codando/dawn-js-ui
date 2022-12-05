@@ -1,28 +1,46 @@
 {
+  "include": ["src/**/*", "index.js"],
   "compilerOptions": {
+    "strict": true,
     "target": "esnext",
     "module": "esnext",
-    "moduleResolution": "nodenext",
-    "lib": ["es2018", "dom"],
-    "declaration": true,
+    "moduleResolution": "node",
+    "lib": ["es2017", "dom"],
     "allowJs": true,
-    "checkJs": false,
+    "declaration": true,
     "emitDeclarationOnly": true,
-    "strict": true,
-    "noImplicitThis": true,
-    "alwaysStrict": true,
+    "outDir": "types",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames":true,
-    "suppressImplicitAnyIndexErrors": true,
-    "noImplicitAny": true,
-    "outDir": "./src/types"
   },
-  "include": [
-    "./src/components/**/*.js",
-  ],
-  "exclude": [
-    "./src/**/*.d.ts",
-    "node_modules",
-    "types"
-  ]
 }
+
+
+// {
+//   "compilerOptions": {
+//     "target": "esnext",
+//     "module": "esnext",
+//     "moduleResolution": "nodenext",
+//     "lib": ["es2018", "dom"],
+//     "declaration": true,
+//     "allowJs": true,
+//     "checkJs": false,
+//     "emitDeclarationOnly": true,
+//     "strict": true,
+//     "noImplicitThis": true,
+//     "alwaysStrict": true,
+//     "esModuleInterop": true,
+//     "forceConsistentCasingInFileNames":true,
+//     "suppressImplicitAnyIndexErrors": true,
+//     "noImplicitAny": true,
+//     "outDir": "./types"
+//   },
+//   "include": [
+//     "./src/components/**/*.js",
+//   ],
+//   "exclude": [
+//     "./src/**/*.d.ts",
+//     "node_modules",
+//     "types"
+//   ]
+// }

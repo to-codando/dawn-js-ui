@@ -1,22 +1,44 @@
 {
   "compilerOptions": {
-  // Tells TypeScript to read JS files, as
-    // normally they are ignored as source files
-    "allowJs": true,
-    // Generate d.ts files
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "lib": ["es2017", "dom"],
     "declaration": true,
-    // This compiler run should
-    // only output d.ts files
+    "allowJs": true,
+    "checkJs": true,
     "emitDeclarationOnly": true,
-    // Types should go into this directory.
-    // Removing this would place the .d.ts files
-    // next to the .js files
-    "outDir": "types",
-    // go to js file when using IDE functions like
-    // "Go to Definition" in VSCode
-    "declarationMap": true
+    "strict": false,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "types": ["node", "mocha", "chai"],
+    "esModuleInterop": true
   },
+  "files": ["browser.d.ts"],
   "include": [
-    "./src/components/**/*.js"
+    "./**/*.js"
   ]
 }
+
+// {
+//   "compilerOptions": {
+//   // Tells TypeScript to read JS files, as
+//     // normally they are ignored as source files
+//     "allowJs": true,
+//     // Generate d.ts files
+//     "declaration": true,
+//     // This compiler run should
+//     // only output d.ts files
+//     "emitDeclarationOnly": true,
+//     // Types should go into this directory.
+//     // Removing this would place the .d.ts files
+//     // next to the .js files
+//     "outDir": "types",
+//     // go to js file when using IDE functions like
+//     // "Go to Definition" in VSCode
+//     "declarationMap": true
+//   },
+//   "include": [
+//     "./src/components/**/*.js"
+//   ]
+// }
