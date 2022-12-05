@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/to-codando/dawn-js-ui#readme",
   "dependencies": {
-    "dawn-js-core": "workspace:^0.1.1"
+    "dawn-js-core": "^0.1.1"
   }
 }
