@@ -1,10 +1,13 @@
 {
   "name": "dawn-js-ui",
   "sideEffects": false,
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "Reactive Library to SPA.",
   "main": "index.js",
   "types": "types",
+  "directories": {
+    "lib": "src"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

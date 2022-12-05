@@ -1,18 +1,21 @@
 {
   "compilerOptions": {
+    "strict": true,
     "target": "esnext",
     "module": "esnext",
-    "moduleResolution": "node",
-    "lib": ["es2017", "dom"],
-    "declaration": true,
+    "lib": ["es2021", "dom"],
     "allowJs": true,
-    "checkJs": true,
+    "declaration": true,
     "emitDeclarationOnly": true,
-    "strict": false,
+    "outDir": "types",
+    "esModuleInterop": true,
+    "moduleResolution": "nodenext",
+    "checkJs": false,
     "noImplicitThis": true,
     "alwaysStrict": true,
-    "types": ["node", "mocha", "chai"],
-    "esModuleInterop": true
+    "forceConsistentCasingInFileNames":true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noImplicitAny": true,
   },
   "files": ["browser.d.ts"],
   "include": [
